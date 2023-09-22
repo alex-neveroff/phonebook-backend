@@ -7,3 +7,5 @@ export { default as addContact } from "./contacts/addContact.js";
 export { default as deleteContact } from "./contacts/deleteContact.js";
 export { default as updateContact } from "./contacts/updateContact.js";
 export { default as getAllContacts } from "./contacts/getAllContacts.js";
+
+export { default as getMessage } from "./home/getMessage.js";
