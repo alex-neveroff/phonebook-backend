@@ -8,7 +8,7 @@
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "servers": [
-    { "url": "https://task-pro-backend-4y7p.onrender.com" },
+    { "url": "https://phonebook-backend-kyyd.onrender.com/api-docs/" },
     { "url": "http://localhost:8000/" }
   ],
   "tags": [
@@ -23,7 +23,7 @@
   ],
 
   "paths": {
-    "/users/signup": {
+    "/users/register": {
       "post": {
         "tags": ["Users"],
         "summary": "User registration",
@@ -258,6 +258,54 @@
     },
 
     "/contacts": {
+      "get": {
+        "tags": ["Contacts"],
+        "summary": "All users contacts",
+        "parameters": [],
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": {
+            "description": "Successful operation, contacts received",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AllContactsResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Not authorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorUnauthorizedResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorNotFoundResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorServerResponse"
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": ["Contacts"],
         "summary": "Add new contact",
@@ -488,7 +536,7 @@
           },
           "password": {
             "type": "string",
-            "description": "User's password. It must contain only Latin letters; may contain numbers, signs, letters in different case; does not contain a space. It must contain minimum 8 characters and maximum 64",
+            "description": "User's password. It must contain only Latin letters; may contain numbers, signs, letters in different case; does not contain a space. It must contain minimum 6 characters and maximum 64",
             "example": "user12345"
           }
         }
@@ -533,7 +581,7 @@
           },
           "password": {
             "type": "string",
-            "description": "User's password. It must contain only Latin letters, at least one uppercase, lowercase letter and a number; does not contain a space. It must contain minimum 8 characters and maximum 64",
+            "description": "User's password. It must contain only Latin letters, at least one uppercase, lowercase letter and a number; does not contain a space. It must contain minimum 6 characters and maximum 64",
             "example": "user12345"
           }
         }
@@ -583,6 +631,35 @@
         }
       },
 
+      "AllContactsResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string",
+              "description": "Contacts`s id",
+              "example": "650d88fbeb3f0699688f4433"
+            },
+            "name": {
+              "type": "string",
+              "description": "Contacts's name",
+              "example": "John Smith"
+            },
+            "number": {
+              "type": "string",
+              "description": "Contacts's number",
+              "example": "+380953691456"
+            },
+            "owner": {
+              "type": "string",
+              "description": "Contacts's owner",
+              "example": "650d84f174dfe68652dc3cff"
+            }
+          }
+        }
+      },
+
       "AddContactRequest": {
         "type": "object",
         "required": ["name", "number"],
@@ -616,6 +693,11 @@
             "type": "string",
             "description": "Contacts's number",
             "example": "+380953691456"
+          },
+          "owner": {
+            "type": "string",
+            "description": "Contacts's owner",
+            "example": "650d84f174dfe68652dc3cff"
           },
           "createdAt": {
             "type": "string",
@@ -663,6 +745,11 @@
             "description": "Contacts's number",
             "example": "+380953691456"
           },
+          "owner": {
+            "type": "string",
+            "description": "Contacts's owner",
+            "example": "650d84f174dfe68652dc3cff"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time",
@@ -693,6 +780,11 @@
             "type": "string",
             "description": "Contacts's number",
             "example": "+380953691456"
+          },
+          "owner": {
+            "type": "string",
+            "description": "Contacts's owner",
+            "example": "650d84f174dfe68652dc3cff"
           },
           "createdAt": {
             "type": "string",
