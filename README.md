@@ -42,15 +42,15 @@ This repository is a Backend part of the Phonebook project, which is designed to
 ## API Endpoints
 
 A detailed description of requests, responses, and schemas can be found in the
-[Swagger Phonebook Project](*************https://task-pro-backend-4y7p.onrender.com/api-docs/*************).
+[Swagger Phonebook Project](https://phonebook-backend-kyyd.onrender.com/api-docs/).
 
 ### Endpoints for Users
 
-<img src="https://res.cloudinary.com/task-pro/image/upload/v1693912933/samples/users.jpg" alt="TaskPro API Endpoints for Users" width="500" height="571">
+<img src="https://res.cloudinary.com/task-pro/image/upload/v1695387338/samples/phonebook-users.jpg" alt="Phonebook API Endpoints for Users" width="500" height="571">
 
 ### Endpoints for Contacts
 
-<img src="https://res.cloudinary.com/task-pro/image/upload/v1693912933/samples/cards.jpg" alt="TaskPro API Endpoints for Users" width="500" height="293">
+<img src="https://res.cloudinary.com/task-pro/image/upload/v1695387338/samples/phonebook-contacts.jpg" alt="Phonebook API Endpoints for Users" width="500" height="293">
 
 ## Developer
 
