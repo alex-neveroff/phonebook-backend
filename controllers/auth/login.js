@@ -24,7 +24,7 @@ const login = async (req, res) => {
   };
   const token = jwt.sign(payload, JWT_SECRET, { expiresIn: tokenTime });
 
-  await Session.create({ token, email, display });
+  await Session.create({ token, email });
 
   res.json({
     token: token,

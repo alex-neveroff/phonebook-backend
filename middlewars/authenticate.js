@@ -26,7 +26,6 @@ const authenticate = async (req, res, next) => {
     const userWithToken = {
       ...user.toObject(),
       token: session.token,
-      display: session.display,
     };
     req.user = userWithToken;
     next();
