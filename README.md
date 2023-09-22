@@ -7,8 +7,8 @@ This repository is a Backend part of the Phonebook project, which is designed to
 - [![Frontend GitHub](https://img.shields.io/badge/Frontend%20GitHub-blue?style=for-the-badge&logo=github)](https://github.com/alex-neveroff/phonebook)
 - [![Frontend Deploy](https://img.shields.io/badge/Frontend%20Deploy-yellow?style=for-the-badge&logo=github)](https://alex-neveroff.github.io/phonebook/)
 - [![Backend GitHub](https://img.shields.io/badge/Backend%20GitHub-green?style=for-the-badge&logo=github)](https://github.com/alex-neveroff/phonebook-backend)
-- [![Backend Deploy](https://img.shields.io/badge/Backend%20Deploy-red?style=for-the-badge&logo=render)](************************)
-- [![Swagger](https://img.shields.io/badge/Swagger-indigo?style=for-the-badge&logo=swagger)](*********)
+- [![Backend Deploy](https://img.shields.io/badge/Backend%20Deploy-red?style=for-the-badge&logo=render)](https://phonebook-backend-kyyd.onrender.com)
+- [![Swagger](https://img.shields.io/badge/Swagger-indigo?style=for-the-badge&logo=swagger)](https://phonebook-backend-kyyd.onrender.com/api-docs/)
 
 ## Technologies used on the Backend
 
@@ -46,11 +46,11 @@ A detailed description of requests, responses, and schemas can be found in the
 
 ### Endpoints for Users
 
-<img src="https://res.cloudinary.com/task-pro/image/upload/v1695387338/samples/phonebook-users.jpg" alt="Phonebook API Endpoints for Users" width="500" height="571">
+<img src="https://res.cloudinary.com/task-pro/image/upload/v1695387338/samples/phonebook-users.jpg" alt="Phonebook API Endpoints for Users" width="550" height="423">
 
 ### Endpoints for Contacts
 
-<img src="https://res.cloudinary.com/task-pro/image/upload/v1695387338/samples/phonebook-contacts.jpg" alt="Phonebook API Endpoints for Users" width="500" height="293">
+<img src="https://res.cloudinary.com/task-pro/image/upload/v1695387338/samples/phonebook-contacts.jpg" alt="Phonebook API Endpoints for Users" width="550" height="423">
 
 ## Developer
 
